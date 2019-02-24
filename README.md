@@ -2,7 +2,7 @@
 
 Aqui demonstramos apenas para fins didáticos um compactador de imagem baseado na Transformada de Wavelet, aos moldes do padrão jpeg 2000.
 
-Funcionamento
+# Funcionamento
 
 Primeiramente a imagem é convertida para o formato iluminância-crominâncias. A seguir, o procedimento consiste em aplicar a transformada de wavelets por duas vezes sobre a imagem, usando a Daubechies 9, para cada um dos três canais. Pela propriedade da transformação, as componentes de detalhe tem muito menos entropia do que a imagem original.
 
@@ -12,7 +12,7 @@ Seguindo, os dados são serializados junto com informações para a posterior de
 
 No caminho de volta, os dados são recuperados, desserializados, desnormalizados e é aplicada a transformada inversa para remontar a imagem original.
 
-Considerações
+# Considerações
 
 Isto tem por fim ser apenas uma criação didática, muito distante de um compactador comercial. O usuário deve garantir que as imagens de entrada tenham largura e altura múltiplas de 4. Ao chamar o compactador, deve ser passado o nome da imagem, e ele gerará o arquivo npz, que pode ser lido pelo descompactador.
 
